@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Header from './Components/Header'
+import FeatureList from './Components/FeatureList'
 
 class App extends Component {
   constructor(props){
@@ -27,7 +28,7 @@ class App extends Component {
     }
   }
 
-  updateFeature(feature, newValue) {
+  updateFeature = (feature, newValue) => {
     const selected = Object.assign({}, this.state.selected);
     selected[feature] = newValue;
     this.setState({
@@ -54,16 +55,7 @@ class App extends Component {
           .map(key => {
             const options = this.props.features[key].map((item, index) => {
               const selectedClass = item.name === this.state.selected[key].name ? 'feature__selected' : '';
-              const featureClass = 'feature__option ' + selectedClass;
-              return <li key={index} className="feature__item">
-                <div className={featureClass}
-                  
-                  onClick={e => this.updateFeature(key, item)}>
-                    { item.name }
-                    ({ new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD'})
-                      .format(item.cost) })
-                </div>
-              </li>
+              return <FeatureList key={index} updateFeature={this.updateFeature} index={index} item={item} selected={selectedClass} />
             });
 
             return <div className="feature" key={key}>
