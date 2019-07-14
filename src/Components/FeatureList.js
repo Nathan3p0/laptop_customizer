@@ -1,19 +1,15 @@
 import React from 'react';
 
 const FeatureList = (props) => {
-    const featureClass = 'feature__option ' + props.selected;
 
-    return ( 
-        <li className="feature__item">
-            <div className={featureClass}
-                onClick={() => props.updateFeature(props.index, props.item)}>
-                { props.item.name }
-                ({ new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD'})
-                    .format(props.item.cost) })
-            </div>
-        </li>
+    return (
+        <div className="feature" key={props.key + 1}>
+            <div className="feature__name">{props.title}</div>
+            <ul className="feature__list">
+                {props.options}
+            </ul>
+        </div>
     );
 }
- 
-export default FeatureList;
 
+export default FeatureList;
