@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
-import Header from './Components/Header';
-import FeatureListItem from './Components/FeatureListItem';
-import FeatureList from './Components/FeatureList';
-import Form from './Components/Form';
-import MainSummary from './Components/MainSummary';
+import Header from './Components/Header/Header';
+import FeatureListItem from './Components/Features/FeatureListItem';
+import FeatureList from './Components/Features/FeatureList';
+import Form from './Components/Form/Form';
+import MainSummary from './Components/Summary/MainSummary';
 
 class App extends Component {
   constructor(props) {

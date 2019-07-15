@@ -1,4 +1,5 @@
 import React from 'react';
+import './FeatureListItem.css';
 
 const FeatureListItem = (props) => {
 

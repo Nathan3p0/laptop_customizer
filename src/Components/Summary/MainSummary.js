@@ -1,6 +1,7 @@
 import React from 'react';
 import Summary from './Summary';
 import SummaryTotal from './SummaryTotal';
+import './MainSummary.css';
 
 const MainSummary = (props) => {
 
