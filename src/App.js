@@ -40,8 +40,6 @@ class App extends Component {
   }
 
   render() {
-    const total = Object.keys(this.state.selected)
-      .reduce((acc, curr) => acc + this.state.selected[curr].cost, 0);
 
     const features = Object.keys(this.props.features)
       .map(key => {
@@ -59,7 +57,7 @@ class App extends Component {
         <Header />
         <main>
           <Form features={features} />
-          <MainSummary selected={this.state.selected} total={total} />
+          <MainSummary selected={this.state.selected} />
         </main>
       </div>
     );

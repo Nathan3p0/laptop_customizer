@@ -12,7 +12,7 @@ const MainSummary = (props) => {
         <section className="main__summary">
             <h3>NEW GREENLEAF 2018</h3>
             {summary}
-            <SummaryTotal total={props.total} />
+            <SummaryTotal selected={props.selected} />
         </section>
     );
 }
