@@ -3,7 +3,7 @@ import React from 'react';
 const FeatureListItem = (props) => {
 
     return (
-        <li key={props.index} className="feature__item">
+        <li className="feature__item">
             <div className={props.featureClass}
 
                 onClick={e => props.updateFeature(props.title, props.item)}>
